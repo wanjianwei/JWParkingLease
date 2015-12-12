@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9786EAF564E68696AD703616 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 465F3CDDAE0A1D8E56D00AB0 /* libPods.a */; };
 		C70085301C1BEFDA002CF9C2 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = C700852F1C1BEFDA002CF9C2 /* open.png */; };
+		C70085341C1BFD90002CF9C2 /* JWSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70085331C1BFD90002CF9C2 /* JWSearchResultViewController.m */; };
+		C70085391C1C2883002CF9C2 /* JWChoseCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70085381C1C2883002CF9C2 /* JWChoseCityViewController.m */; };
 		C7FD5D921C1A99D500F01E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D911C1A99D500F01E37 /* main.m */; };
 		C7FD5D951C1A99D500F01E37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D941C1A99D500F01E37 /* AppDelegate.m */; };
 		C7FD5D9B1C1A99D500F01E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D991C1A99D500F01E37 /* Main.storyboard */; };
@@ -28,6 +30,13 @@
 		517C7C406DF9924B7380D102 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8C105F8F2E9F0760EA62185B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C700852F1C1BEFDA002CF9C2 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = open.png; path = icons/open.png; sourceTree = SOURCE_ROOT; };
+		C70085311C1BF38F002CF9C2 /* JWParkingLease.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWParkingLease.pch; sourceTree = "<group>"; };
+		C70085321C1BFD90002CF9C2 /* JWSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchResultViewController.h; sourceTree = "<group>"; };
+		C70085331C1BFD90002CF9C2 /* JWSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchResultViewController.m; sourceTree = "<group>"; };
+		C70085351C1C06ED002CF9C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		C70085361C1C06ED002CF9C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		C70085371C1C2883002CF9C2 /* JWChoseCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWChoseCityViewController.h; sourceTree = "<group>"; };
+		C70085381C1C2883002CF9C2 /* JWChoseCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWChoseCityViewController.m; sourceTree = "<group>"; };
 		C7FD5D8D1C1A99D500F01E37 /* JWParkingLease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWParkingLease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FD5D911C1A99D500F01E37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7FD5D931C1A99D500F01E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +126,7 @@
 				C7FD5DB91C1AAE8F00F01E37 /* centreViewController */,
 				C7FD5DB01C1AAB2B00F01E37 /* icons */,
 				C7FD5D911C1A99D500F01E37 /* main.m */,
+				C70085311C1BF38F002CF9C2 /* JWParkingLease.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +150,10 @@
 				C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */,
 				C7FD5DBF1C1AB01A00F01E37 /* JWCenterLeaseViewController.h */,
 				C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */,
+				C70085321C1BFD90002CF9C2 /* JWSearchResultViewController.h */,
+				C70085331C1BFD90002CF9C2 /* JWSearchResultViewController.m */,
+				C70085371C1C2883002CF9C2 /* JWChoseCityViewController.h */,
+				C70085381C1C2883002CF9C2 /* JWChoseCityViewController.m */,
 			);
 			name = centreViewController;
 			sourceTree = "<group>";
@@ -254,10 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70085341C1BFD90002CF9C2 /* JWSearchResultViewController.m in Sources */,
 				C7FD5D951C1A99D500F01E37 /* AppDelegate.m in Sources */,
 				C7FD5D921C1A99D500F01E37 /* main.m in Sources */,
 				C7FD5DBC1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m in Sources */,
 				C7FD5DC11C1AB01A00F01E37 /* JWCenterLeaseViewController.m in Sources */,
+				C70085391C1C2883002CF9C2 /* JWChoseCityViewController.m in Sources */,
 				C7FD5DAF1C1AA08600F01E37 /* JWLeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +285,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C7FD5D9A1C1A99D500F01E37 /* Base */,
+				C70085351C1C06ED002CF9C2 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -277,6 +294,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C7FD5D9F1C1A99D500F01E37 /* Base */,
+				C70085361C1C06ED002CF9C2 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -372,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JWParkingLease/JWParkingLease.pch";
 				INFOPLIST_FILE = JWParkingLease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hust.JWParkingLease;
@@ -385,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JWParkingLease/JWParkingLease.pch";
 				INFOPLIST_FILE = JWParkingLease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hust.JWParkingLease;

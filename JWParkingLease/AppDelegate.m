@@ -35,7 +35,7 @@
     _drawerController.restorationIdentifier = @"drawerView";
     
     //指定打开或关闭手势
-    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
     [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
     //左边侧栏打开方式

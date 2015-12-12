@@ -7,6 +7,8 @@
 //
 
 #import "JWCenterLeaseViewController.h"
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface JWCenterLeaseViewController ()
 
@@ -19,8 +21,8 @@
     //导航栏设置
     self.title = @"车位出租";
 
-    UIBarButtonItem * leftBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"open.png"] style:UIBarButtonItemStyleDone target:self action:@selector(openSlide)];
-    self.navigationItem.leftBarButtonItem = leftBtn;
+    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(openSlide)];
+    [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +32,7 @@
 
 
 -(void)openSlide{
-    
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 @end

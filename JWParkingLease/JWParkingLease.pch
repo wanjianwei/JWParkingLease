@@ -1,0 +1,17 @@
+//
+//  JWParkingLease.pch
+//  JWParkingLease
+//
+//  Created by jway on 15/12/12.
+//  Copyright © 2015年 jway. All rights reserved.
+//
+
+
+//去除调试阶段的NSLog函数
+#ifdef DEBUG
+#define DLog(...) NSLog(__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+
+
