@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JWLeftViewController.h
 //  JWParkingLease
 //
 //  Created by jway on 15/12/11.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface JWLeftViewController : UIViewController
 
 @end
-

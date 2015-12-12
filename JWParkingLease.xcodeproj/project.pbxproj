@@ -7,25 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9786EAF564E68696AD703616 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 465F3CDDAE0A1D8E56D00AB0 /* libPods.a */; };
+		C70085301C1BEFDA002CF9C2 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = C700852F1C1BEFDA002CF9C2 /* open.png */; };
 		C7FD5D921C1A99D500F01E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D911C1A99D500F01E37 /* main.m */; };
 		C7FD5D951C1A99D500F01E37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D941C1A99D500F01E37 /* AppDelegate.m */; };
-		C7FD5D981C1A99D500F01E37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D971C1A99D500F01E37 /* ViewController.m */; };
 		C7FD5D9B1C1A99D500F01E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D991C1A99D500F01E37 /* Main.storyboard */; };
 		C7FD5D9D1C1A99D500F01E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D9C1C1A99D500F01E37 /* Assets.xcassets */; };
 		C7FD5DA01C1A99D500F01E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D9E1C1A99D500F01E37 /* LaunchScreen.storyboard */; };
+		C7FD5DAF1C1AA08600F01E37 /* JWLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5DAE1C1AA08600F01E37 /* JWLeftViewController.m */; };
+		C7FD5DB51C1AAC2A00F01E37 /* get.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB11C1AAC2A00F01E37 /* get.png */; };
+		C7FD5DB61C1AAC2A00F01E37 /* lease.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB21C1AAC2A00F01E37 /* lease.png */; };
+		C7FD5DB71C1AAC2A00F01E37 /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB31C1AAC2A00F01E37 /* portrait.png */; };
+		C7FD5DB81C1AAC2A00F01E37 /* setUp.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB41C1AAC2A00F01E37 /* setUp.png */; };
+		C7FD5DBC1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */; };
+		C7FD5DC11C1AB01A00F01E37 /* JWCenterLeaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		465F3CDDAE0A1D8E56D00AB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		517C7C406DF9924B7380D102 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8C105F8F2E9F0760EA62185B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C700852F1C1BEFDA002CF9C2 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = open.png; path = icons/open.png; sourceTree = SOURCE_ROOT; };
 		C7FD5D8D1C1A99D500F01E37 /* JWParkingLease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWParkingLease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FD5D911C1A99D500F01E37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7FD5D931C1A99D500F01E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7FD5D941C1A99D500F01E37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C7FD5D961C1A99D500F01E37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C7FD5D971C1A99D500F01E37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C7FD5D9A1C1A99D500F01E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7FD5D9C1C1A99D500F01E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FD5D9F1C1A99D500F01E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7FD5DA11C1A99D500F01E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7FD5DAD1C1AA08600F01E37 /* JWLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLeftViewController.h; sourceTree = "<group>"; };
+		C7FD5DAE1C1AA08600F01E37 /* JWLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLeftViewController.m; sourceTree = "<group>"; };
+		C7FD5DB11C1AAC2A00F01E37 /* get.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = get.png; path = icons/get.png; sourceTree = SOURCE_ROOT; };
+		C7FD5DB21C1AAC2A00F01E37 /* lease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lease.png; path = icons/lease.png; sourceTree = SOURCE_ROOT; };
+		C7FD5DB31C1AAC2A00F01E37 /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portrait.png; path = icons/portrait.png; sourceTree = SOURCE_ROOT; };
+		C7FD5DB41C1AAC2A00F01E37 /* setUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setUp.png; path = icons/setUp.png; sourceTree = SOURCE_ROOT; };
+		C7FD5DBA1C1AAEF400F01E37 /* JWCenterGetParkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCenterGetParkingViewController.h; sourceTree = "<group>"; };
+		C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCenterGetParkingViewController.m; sourceTree = "<group>"; };
+		C7FD5DBF1C1AB01A00F01E37 /* JWCenterLeaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCenterLeaseViewController.h; sourceTree = "<group>"; };
+		C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCenterLeaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9786EAF564E68696AD703616 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E7AE06F8C0F922EE68858AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C105F8F2E9F0760EA62185B /* Pods.debug.xcconfig */,
+				517C7C406DF9924B7380D102 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0FCAA8E2972E249480E5B55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				465F3CDDAE0A1D8E56D00AB0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7FD5D841C1A99D500F01E37 = {
 			isa = PBXGroup;
 			children = (
 				C7FD5D8F1C1A99D500F01E37 /* JWParkingLease */,
 				C7FD5D8E1C1A99D500F01E37 /* Products */,
+				1E7AE06F8C0F922EE68858AE /* Pods */,
+				A0FCAA8E2972E249480E5B55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,13 +100,13 @@
 			children = (
 				C7FD5D931C1A99D500F01E37 /* AppDelegate.h */,
 				C7FD5D941C1A99D500F01E37 /* AppDelegate.m */,
-				C7FD5D961C1A99D500F01E37 /* ViewController.h */,
-				C7FD5D971C1A99D500F01E37 /* ViewController.m */,
 				C7FD5D991C1A99D500F01E37 /* Main.storyboard */,
 				C7FD5D9C1C1A99D500F01E37 /* Assets.xcassets */,
 				C7FD5D9E1C1A99D500F01E37 /* LaunchScreen.storyboard */,
 				C7FD5DA11C1A99D500F01E37 /* Info.plist */,
 				C7FD5D901C1A99D500F01E37 /* Supporting Files */,
+				C7FD5DAD1C1AA08600F01E37 /* JWLeftViewController.h */,
+				C7FD5DAE1C1AA08600F01E37 /* JWLeftViewController.m */,
 			);
 			path = JWParkingLease;
 			sourceTree = "<group>";
@@ -74,9 +114,34 @@
 		C7FD5D901C1A99D500F01E37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7FD5DB91C1AAE8F00F01E37 /* centreViewController */,
+				C7FD5DB01C1AAB2B00F01E37 /* icons */,
 				C7FD5D911C1A99D500F01E37 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7FD5DB01C1AAB2B00F01E37 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				C700852F1C1BEFDA002CF9C2 /* open.png */,
+				C7FD5DB11C1AAC2A00F01E37 /* get.png */,
+				C7FD5DB21C1AAC2A00F01E37 /* lease.png */,
+				C7FD5DB31C1AAC2A00F01E37 /* portrait.png */,
+				C7FD5DB41C1AAC2A00F01E37 /* setUp.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		C7FD5DB91C1AAE8F00F01E37 /* centreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD5DBA1C1AAEF400F01E37 /* JWCenterGetParkingViewController.h */,
+				C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */,
+				C7FD5DBF1C1AB01A00F01E37 /* JWCenterLeaseViewController.h */,
+				C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */,
+			);
+			name = centreViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7FD5DA41C1A99D500F01E37 /* Build configuration list for PBXNativeTarget "JWParkingLease" */;
 			buildPhases = (
+				8AFC9614322A5702EAAAA0E4 /* Check Pods Manifest.lock */,
 				C7FD5D891C1A99D500F01E37 /* Sources */,
 				C7FD5D8A1C1A99D500F01E37 /* Frameworks */,
 				C7FD5D8B1C1A99D500F01E37 /* Resources */,
+				228B7494E20F3F15F748FF21 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,22 +203,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FD5DB71C1AAC2A00F01E37 /* portrait.png in Resources */,
+				C7FD5DB61C1AAC2A00F01E37 /* lease.png in Resources */,
 				C7FD5DA01C1A99D500F01E37 /* LaunchScreen.storyboard in Resources */,
+				C7FD5DB81C1AAC2A00F01E37 /* setUp.png in Resources */,
 				C7FD5D9D1C1A99D500F01E37 /* Assets.xcassets in Resources */,
+				C70085301C1BEFDA002CF9C2 /* open.png in Resources */,
+				C7FD5DB51C1AAC2A00F01E37 /* get.png in Resources */,
 				C7FD5D9B1C1A99D500F01E37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		228B7494E20F3F15F748FF21 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AFC9614322A5702EAAAA0E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7FD5D891C1A99D500F01E37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FD5D981C1A99D500F01E37 /* ViewController.m in Sources */,
 				C7FD5D951C1A99D500F01E37 /* AppDelegate.m in Sources */,
 				C7FD5D921C1A99D500F01E37 /* main.m in Sources */,
+				C7FD5DBC1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m in Sources */,
+				C7FD5DC11C1AB01A00F01E37 /* JWCenterLeaseViewController.m in Sources */,
+				C7FD5DAF1C1AA08600F01E37 /* JWLeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +368,10 @@
 		};
 		C7FD5DA51C1A99D500F01E37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C105F8F2E9F0760EA62185B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JWParkingLease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hust.JWParkingLease;
@@ -272,8 +381,10 @@
 		};
 		C7FD5DA61C1A99D500F01E37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 517C7C406DF9924B7380D102 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JWParkingLease/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hust.JWParkingLease;
@@ -300,6 +411,7 @@
 				C7FD5DA61C1A99D500F01E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

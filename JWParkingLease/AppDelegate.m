@@ -7,8 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "JWLeftViewController.h"
+#import "JWCenterGetParkingViewController.h"
+#import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
+//#import "MMExampleDrawerVisualStateManager.h"
+
+
+#import <QuartzCore/QuartzCore.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic,strong) MMDrawerController * drawerController;
 
 @end
 
@@ -16,7 +26,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    JWLeftViewController * leftView = [[JWLeftViewController alloc] init];
+    leftView.restorationIdentifier = @"leftView";
+    JWCenterGetParkingViewController * centerView = [[JWCenterGetParkingViewController alloc] init];
+    UINavigationController * navCenterView = [[UINavigationController alloc] initWithRootViewController:centerView];
+    navCenterView.restorationIdentifier = @"navCenterView";
+    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navCenterView leftDrawerViewController:leftView];
+    _drawerController.restorationIdentifier = @"drawerView";
+    
+    //指定打开或关闭手势
+    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    //左边侧栏打开方式
+    [_drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
+    //侧栏的宽度
+    _drawerController.maximumLeftDrawerWidth = [UIScreen mainScreen].bounds.size.width/4;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:self.drawerController];
+   // _window.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 
@@ -42,4 +71,31 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/*
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder{
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder{
+   
+    return YES;
+}
+
+- (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder{
+    
+    NSLog(@"arr = %@",identifierComponents);
+    
+    NSString * key = [identifierComponents lastObject];
+    if([key isEqualToString:@"drawerView"]){
+        return self.window.rootViewController;
+    }else if ([key isEqualToString:@"leftView"]){
+        return ((MMDrawerController *)self.window.rootViewController).leftDrawerViewController;
+    }else if ([key isEqualToString:@"navCenterView"]){
+       return ((MMDrawerController *)self.window.rootViewController).centerViewController;
+    }else{
+        return nil;
+    }
+}
+*/
 @end
