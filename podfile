@@ -1,0 +1,9 @@
+platform:ios,'8.0'
+pod 'AFNetworking'
+pod 'AMapSearch'
+pod 'CCHMapClusterController'
+pod 'MBProgressHUD','~>0.9.1'
+pod 'SDWebImage'
+pod 'ViewDeck'
+pod 'MWPhotoBrowser'
+

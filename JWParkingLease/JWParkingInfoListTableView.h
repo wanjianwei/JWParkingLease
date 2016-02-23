@@ -10,4 +10,7 @@
 
 @interface JWParkingInfoListTableView : UIViewController
 
+//接收从上一个视图传递过来的数据
+@property(nonatomic,strong)NSDictionary * getDic;
+
 @end

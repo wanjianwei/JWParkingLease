@@ -10,4 +10,7 @@
 
 @interface JWMyDemandInfoDetailTableViewController : UITableViewController
 
+//接收上一界面传递过来的信息
+@property(nonatomic,assign) NSString * demandId;
+
 @end

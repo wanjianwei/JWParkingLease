@@ -7,18 +7,17 @@
 //
 
 #import "AppDelegate.h"
-#import "JWLeftViewController.h"
-#import "JWCenterGetParkingViewController.h"
-#import "MMDrawerController.h"
-#import "MMDrawerVisualState.h"
-//#import "MMExampleDrawerVisualStateManager.h"
 
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface AppDelegate ()
+#import "IIViewDeckController.h"
 
-@property (nonatomic,strong) MMDrawerController * drawerController;
+#import "LeftViewController.h"
+#import "JWMainViewController.h"
+
+@interface AppDelegate ()<CLLocationManagerDelegate>
+    
 
 @end
 
@@ -26,26 +25,51 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    JWLeftViewController * leftView = [[JWLeftViewController alloc] init];
-    leftView.restorationIdentifier = @"leftView";
-    JWCenterGetParkingViewController * centerView = [[JWCenterGetParkingViewController alloc] init];
-    UINavigationController * navCenterView = [[UINavigationController alloc] initWithRootViewController:centerView];
-    navCenterView.restorationIdentifier = @"navCenterView";
-    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:navCenterView leftDrawerViewController:leftView];
-    _drawerController.restorationIdentifier = @"drawerView";
+        
+    //初始化并设置网络请求管理器
+    self.manager=[AFHTTPSessionManager manager];
+    self.manager.responseSerializer=[AFJSONResponseSerializer serializer];
+    //manager加上这个就会在success中回调
+     self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    //设置请求时间
+    self.manager.requestSerializer.timeoutInterval = 15.0;
     
-    //指定打开或关闭手势
-    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
-    [self.drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
-    //左边侧栏打开方式
-    [_drawerController setDrawerVisualStateBlock:[MMDrawerVisualState swingingDoorVisualStateBlock]];
-    //侧栏的宽度
-    _drawerController.maximumLeftDrawerWidth = [UIScreen mainScreen].bounds.size.width/4;
+    //初始化全局定位控制器
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    _locationManager.distanceFilter = 5000;
+    [_locationManager requestWhenInUseAuthorization];
+    _locationManager.delegate = self;
     
+    
+    //初始化leftViewController
+    LeftViewController * leftView = [[LeftViewController alloc] init];
+    //初始化3个main视图
+    JWMainViewController * mainView1 = [[JWMainViewController alloc] initWithroleType:1];
+    UINavigationController * navMainView1 = [[UINavigationController alloc] initWithRootViewController:mainView1];
+    
+    JWMainViewController * mainView2 = [[JWMainViewController alloc] initWithroleType:2];
+    UINavigationController * navMainView2 = [[UINavigationController alloc] initWithRootViewController:mainView2];
+    
+    JWMainViewController * mainView3 = [[JWMainViewController alloc] initWithroleType:3];
+    UINavigationController * navMainView3 = [[UINavigationController alloc] initWithRootViewController:mainView3];
+    
+    UITabBarController * tabbarView = [[UITabBarController alloc] init];
+    tabbarView.viewControllers = [NSArray arrayWithObjects:navMainView1,navMainView2,navMainView3, nil];
+    
+    
+    IIViewDeckController * deckController = [[IIViewDeckController alloc] initWithCenterViewController:tabbarView leftViewController:leftView];
+    
+    [deckController setLeftSize:[UIScreen mainScreen].bounds.size.width*0.4];
+    
+    //设置左侧视图打开方式——只能允许点击按钮打开
+    deckController.panningMode = IIViewDeckNoPanning;
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController:self.drawerController];
-   // _window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:deckController];
+    
+    
     return YES;
 }
 
@@ -55,8 +79,8 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -64,7 +88,11 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    //设置登录状态为未登录
+    [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"loginState"];
+    
+    //开启定位
+    [_locationManager startUpdatingLocation];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -98,4 +126,45 @@
     }
 }
 */
+#pragma CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    
+    CLLocation * currentLocation = [locations lastObject];
+    //地理信息反编码
+    CLGeocoder * geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        //取出地理反编码信息
+        if (placemarks.count>0) {
+            CLPlacemark * placemark = [placemarks firstObject];
+            NSString * city = [placemark.addressDictionary objectForKey:@"City"];
+            //更新城市或其他信息
+            if (![city isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:@"city"]]) {
+                [[NSUserDefaults standardUserDefaults] setObject:city forKey:@"city"];
+            }
+            //存储当前经纬度
+            self.latitude = currentLocation.coordinate.latitude;
+            self.longitude = currentLocation.coordinate.longitude;
+            
+            //投递推送成功通知
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"locationSuccessNotification" object:nil];
+            
+        }
+    }];
+   //关闭定位
+    [_locationManager stopUpdatingLocation];
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    //将定位位置设置为“未知”
+    [[NSUserDefaults standardUserDefaults] setObject:@"未知" forKey:@"city"];
+    
+    //投递定位失败通知——不关闭定位
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"locationFailNotification" object:nil userInfo:@{@"message":error.localizedDescription}];
+    
+    
+}
+
+
 @end

@@ -8,35 +8,183 @@
 
 /* Begin PBXBuildFile section */
 		9786EAF564E68696AD703616 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 465F3CDDAE0A1D8E56D00AB0 /* libPods.a */; };
-		C70085301C1BEFDA002CF9C2 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = C700852F1C1BEFDA002CF9C2 /* open.png */; };
-		C70085341C1BFD90002CF9C2 /* JWSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70085331C1BFD90002CF9C2 /* JWSearchResultViewController.m */; };
-		C70085391C1C2883002CF9C2 /* JWChoseCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70085381C1C2883002CF9C2 /* JWChoseCityViewController.m */; };
+		C701B43F1C477D4100747F68 /* JWParkingDetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C701B43D1C477D4100747F68 /* JWParkingDetailInfoViewController.m */; };
+		C701B4441C47C6EA00747F68 /* JWCommentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C701B4431C47C6EA00747F68 /* JWCommentInfo.m */; };
+		C701B4471C47CF5500747F68 /* JWCommentInfoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C701B4461C47CF5500747F68 /* JWCommentInfoFrame.m */; };
+		C701B44A1C47D92800747F68 /* JWCommentCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C701B4491C47D92800747F68 /* JWCommentCustomCell.m */; };
+		C705E4391C3C9E960030027E /* invisible_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C705E4361C3C9E960030027E /* invisible_icon@2x.png */; };
+		C705E43A1C3C9E960030027E /* login_pwd.png in Resources */ = {isa = PBXBuildFile; fileRef = C705E4371C3C9E960030027E /* login_pwd.png */; };
+		C705E43B1C3C9E960030027E /* login_user.png in Resources */ = {isa = PBXBuildFile; fileRef = C705E4381C3C9E960030027E /* login_user.png */; };
+		C705E43E1C3CDB7B0030027E /* JWGetRandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705E43D1C3CDB7B0030027E /* JWGetRandomViewController.m */; };
+		C705E4411C3CF2170030027E /* JWRegisterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705E4401C3CF2170030027E /* JWRegisterTableViewController.m */; };
+		C705E4441C3D31CD0030027E /* JWResetPasswdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C705E4431C3D31CD0030027E /* JWResetPasswdTableViewController.m */; };
+		C708D9FA1C2251A900CEA6FC /* JWChoseVillageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C708D9F91C2251A900CEA6FC /* JWChoseVillageViewController.m */; };
+		C708D9FD1C2291A800CEA6FC /* choseTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C708D9FC1C2291A800CEA6FC /* choseTimeViewController.m */; };
+		C70BFDBD1C3A923400B9F665 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70BFDBC1C3A923400B9F665 /* LeftViewController.m */; };
+		C7567F141C50A78A00CD0323 /* JWCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7567F131C50A78A00CD0323 /* JWCommentViewController.m */; };
+		C7567F171C50C13700CD0323 /* JWMyInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7567F161C50C13700CD0323 /* JWMyInfoTableViewController.m */; };
+		C7845C221C3A027900D5E55B /* change.png in Resources */ = {isa = PBXBuildFile; fileRef = C7845C1F1C3A027900D5E55B /* change.png */; };
+		C7845C231C3A027900D5E55B /* portrait_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C7845C201C3A027900D5E55B /* portrait_2.png */; };
+		C7845C241C3A027900D5E55B /* publish.png in Resources */ = {isa = PBXBuildFile; fileRef = C7845C211C3A027900D5E55B /* publish.png */; };
+		C7845C271C3A02C200D5E55B /* JWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7845C261C3A02C200D5E55B /* JWBaseViewController.m */; };
+		C7845C371C3A4ACC00D5E55B /* JWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7845C361C3A4ACC00D5E55B /* JWMainViewController.m */; };
+		C7F8044D1C44C24D0034D874 /* JWParkingInfoCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F8044C1C44C24D0034D874 /* JWParkingInfoCustomCell.m */; };
+		C7F804501C44CAB10034D874 /* JWParkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F8044F1C44CAB10034D874 /* JWParkingInfo.m */; };
+		C7F8045C1C44DB960034D874 /* sdRefeshView_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F804521C44DB960034D874 /* sdRefeshView_arrow@2x.png */; };
+		C7F8045D1C44DB960034D874 /* SDRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F804551C44DB960034D874 /* SDRefreshFooterView.m */; };
+		C7F8045E1C44DB960034D874 /* SDRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F804571C44DB960034D874 /* SDRefreshHeaderView.m */; };
+		C7F8045F1C44DB960034D874 /* SDRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F804591C44DB960034D874 /* SDRefreshView.m */; };
+		C7F804601C44DB960034D874 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F8045B1C44DB960034D874 /* UIView+SDExtension.m */; };
+		C7F804641C44EBFC0034D874 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F804631C44EBFC0034D874 /* CustomButton.m */; };
+		C7F804671C45179E0034D874 /* JWParkingInfoListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F804661C45179E0034D874 /* JWParkingInfoListTableView.m */; };
+		C7FA06CB1C4F25AF001D74B4 /* JWMyDemandListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA06CA1C4F25AF001D74B4 /* JWMyDemandListViewController.m */; };
+		C7FA06CE1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA06CD1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.m */; };
+		C7FA06D11C4F7705001D74B4 /* JWMyAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA06D01C4F7705001D74B4 /* JWMyAttentionViewController.m */; };
+		C7FA06D41C4F91F2001D74B4 /* JWParkingOrDemandListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA06D31C4F91F2001D74B4 /* JWParkingOrDemandListViewController.m */; };
+		C7FA06D71C4FB1BF001D74B4 /* JWMyCarportTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA06D61C4FB1BF001D74B4 /* JWMyCarportTableViewController.m */; };
+		C7FA93B91C4C7CCD00699B29 /* JWScrollImagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA93B81C4C7CCD00699B29 /* JWScrollImagesView.m */; };
+		C7FA93BD1C4CB3F300699B29 /* JWInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA93BC1C4CB3F300699B29 /* JWInputBarView.m */; };
+		C7FA93C01C4E0D3600699B29 /* JWDemandInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA93BF1C4E0D3600699B29 /* JWDemandInfoViewController.m */; };
+		C7FA93C51C4E1DBD00699B29 /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FA93C21C4E1DBD00699B29 /* ico_make.png */; };
+		C7FA93C61C4E1DBD00699B29 /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA93C41C4E1DBD00699B29 /* JSDropDownMenu.m */; };
+		C7FA93C81C4E2AFC00699B29 /* reply1.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FA93C71C4E2AFC00699B29 /* reply1.png */; };
+		C7FA93CB1C4E43A400699B29 /* JWSystemSetUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA93CA1C4E43A400699B29 /* JWSystemSetUpViewController.m */; };
+		C7FA93D11C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FA93D01C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.m */; };
+		C7FAE9D31C1EE9B400E99804 /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FAE9D21C1EE9B400E99804 /* ClusterAnnotationView.m */; };
+		C7FAE9D51C1EF91900E99804 /* search_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FAE9D41C1EF91900E99804 /* search_pin.png */; };
+		C7FB3A951C43986A00B89A2C /* JWParkingLeaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FB3A941C43986A00B89A2C /* JWParkingLeaseViewController.m */; };
+		C7FB3A981C43D71200B89A2C /* JWPublishDemandTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FB3A971C43D71200B89A2C /* JWPublishDemandTableViewController.m */; };
+		C7FB53401C3BDDA0000ECA28 /* JWPublishInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FB533F1C3BDDA0000ECA28 /* JWPublishInfoViewController.m */; };
+		C7FB534D1C3BE480000ECA28 /* JWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FB534B1C3BE480000ECA28 /* JWLoginViewController.m */; };
+		C7FB53511C3BF62E000ECA28 /* XMNAnimTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FB53501C3BF62E000ECA28 /* XMNAnimTextFiled.m */; };
+		C7FC338C1C48E11F000233B6 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FC338B1C48E11F000233B6 /* reply.png */; };
+		C7FCAE9B1C3F872E00B92AB2 /* location_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCAE9A1C3F872E00B92AB2 /* location_pressed.png */; };
+		C7FCFA131C3E004F00E964F5 /* demand.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA0D1C3E004F00E964F5 /* demand.png */; };
+		C7FCFA141C3E004F00E964F5 /* rightNavBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA0E1C3E004F00E964F5 /* rightNavBtn.png */; };
+		C7FCFA151C3E004F00E964F5 /* myFocus.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA0F1C3E004F00E964F5 /* myFocus.png */; };
+		C7FCFA161C3E004F00E964F5 /* myNotice.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA101C3E004F00E964F5 /* myNotice.png */; };
+		C7FCFA171C3E004F00E964F5 /* myOrder.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA111C3E004F00E964F5 /* myOrder.png */; };
+		C7FCFA181C3E004F00E964F5 /* leftNavBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA121C3E004F00E964F5 /* leftNavBtn.png */; };
+		C7FCFA1A1C3E377A00E964F5 /* bg_img.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA191C3E377A00E964F5 /* bg_img.png */; };
+		C7FCFA1C1C3E3F1100E964F5 /* user_location.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FCFA1B1C3E3F1100E964F5 /* user_location.png */; };
 		C7FD5D921C1A99D500F01E37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D911C1A99D500F01E37 /* main.m */; };
 		C7FD5D951C1A99D500F01E37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5D941C1A99D500F01E37 /* AppDelegate.m */; };
 		C7FD5D9B1C1A99D500F01E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D991C1A99D500F01E37 /* Main.storyboard */; };
 		C7FD5D9D1C1A99D500F01E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D9C1C1A99D500F01E37 /* Assets.xcassets */; };
 		C7FD5DA01C1A99D500F01E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5D9E1C1A99D500F01E37 /* LaunchScreen.storyboard */; };
-		C7FD5DAF1C1AA08600F01E37 /* JWLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5DAE1C1AA08600F01E37 /* JWLeftViewController.m */; };
-		C7FD5DB51C1AAC2A00F01E37 /* get.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB11C1AAC2A00F01E37 /* get.png */; };
-		C7FD5DB61C1AAC2A00F01E37 /* lease.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB21C1AAC2A00F01E37 /* lease.png */; };
 		C7FD5DB71C1AAC2A00F01E37 /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB31C1AAC2A00F01E37 /* portrait.png */; };
 		C7FD5DB81C1AAC2A00F01E37 /* setUp.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FD5DB41C1AAC2A00F01E37 /* setUp.png */; };
-		C7FD5DBC1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */; };
-		C7FD5DC11C1AB01A00F01E37 /* JWCenterLeaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */; };
+		C7FF05E21C462F8D003C2E34 /* JWParkingInfoFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FF05E11C462F8D003C2E34 /* JWParkingInfoFrame.m */; };
+		C7FFB68D1C2017E2003F0E3B /* MyInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB68C1C2017E2003F0E3B /* MyInfoTableViewController.m */; };
+		C7FFB6921C2032FE003F0E3B /* my_profile_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C7FFB6911C2032FE003F0E3B /* my_profile_bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		465F3CDDAE0A1D8E56D00AB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		517C7C406DF9924B7380D102 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8C105F8F2E9F0760EA62185B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C700852F1C1BEFDA002CF9C2 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = open.png; path = icons/open.png; sourceTree = SOURCE_ROOT; };
 		C70085311C1BF38F002CF9C2 /* JWParkingLease.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWParkingLease.pch; sourceTree = "<group>"; };
-		C70085321C1BFD90002CF9C2 /* JWSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchResultViewController.h; sourceTree = "<group>"; };
-		C70085331C1BFD90002CF9C2 /* JWSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchResultViewController.m; sourceTree = "<group>"; };
 		C70085351C1C06ED002CF9C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C70085361C1C06ED002CF9C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		C70085371C1C2883002CF9C2 /* JWChoseCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWChoseCityViewController.h; sourceTree = "<group>"; };
-		C70085381C1C2883002CF9C2 /* JWChoseCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWChoseCityViewController.m; sourceTree = "<group>"; };
+		C701B43C1C477D4100747F68 /* JWParkingDetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingDetailInfoViewController.h; sourceTree = "<group>"; };
+		C701B43D1C477D4100747F68 /* JWParkingDetailInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingDetailInfoViewController.m; sourceTree = "<group>"; };
+		C701B4421C47C6EA00747F68 /* JWCommentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCommentInfo.h; sourceTree = "<group>"; };
+		C701B4431C47C6EA00747F68 /* JWCommentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCommentInfo.m; sourceTree = "<group>"; };
+		C701B4451C47CF5500747F68 /* JWCommentInfoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCommentInfoFrame.h; sourceTree = "<group>"; };
+		C701B4461C47CF5500747F68 /* JWCommentInfoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCommentInfoFrame.m; sourceTree = "<group>"; };
+		C701B4481C47D92800747F68 /* JWCommentCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCommentCustomCell.h; sourceTree = "<group>"; };
+		C701B4491C47D92800747F68 /* JWCommentCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCommentCustomCell.m; sourceTree = "<group>"; };
+		C705E4361C3C9E960030027E /* invisible_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "invisible_icon@2x.png"; path = "icons/invisible_icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		C705E4371C3C9E960030027E /* login_pwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_pwd.png; path = icons/login_pwd.png; sourceTree = SOURCE_ROOT; };
+		C705E4381C3C9E960030027E /* login_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = login_user.png; path = icons/login_user.png; sourceTree = SOURCE_ROOT; };
+		C705E43C1C3CDB7B0030027E /* JWGetRandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWGetRandomViewController.h; sourceTree = "<group>"; };
+		C705E43D1C3CDB7B0030027E /* JWGetRandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWGetRandomViewController.m; sourceTree = "<group>"; };
+		C705E43F1C3CF2170030027E /* JWRegisterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRegisterTableViewController.h; sourceTree = "<group>"; };
+		C705E4401C3CF2170030027E /* JWRegisterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRegisterTableViewController.m; sourceTree = "<group>"; };
+		C705E4421C3D31CD0030027E /* JWResetPasswdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWResetPasswdTableViewController.h; sourceTree = "<group>"; };
+		C705E4431C3D31CD0030027E /* JWResetPasswdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWResetPasswdTableViewController.m; sourceTree = "<group>"; };
+		C708D9F81C2251A900CEA6FC /* JWChoseVillageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWChoseVillageViewController.h; sourceTree = "<group>"; };
+		C708D9F91C2251A900CEA6FC /* JWChoseVillageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWChoseVillageViewController.m; sourceTree = "<group>"; };
+		C708D9FB1C2291A800CEA6FC /* choseTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = choseTimeViewController.h; sourceTree = "<group>"; };
+		C708D9FC1C2291A800CEA6FC /* choseTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = choseTimeViewController.m; sourceTree = "<group>"; };
+		C70BFDBB1C3A923400B9F665 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		C70BFDBC1C3A923400B9F665 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		C7567F121C50A78A00CD0323 /* JWCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCommentViewController.h; sourceTree = "<group>"; };
+		C7567F131C50A78A00CD0323 /* JWCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCommentViewController.m; sourceTree = "<group>"; };
+		C7567F151C50C13700CD0323 /* JWMyInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMyInfoTableViewController.h; sourceTree = "<group>"; };
+		C7567F161C50C13700CD0323 /* JWMyInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMyInfoTableViewController.m; sourceTree = "<group>"; };
+		C7845C1F1C3A027900D5E55B /* change.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = change.png; path = icons/change.png; sourceTree = SOURCE_ROOT; };
+		C7845C201C3A027900D5E55B /* portrait_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portrait_2.png; path = icons/portrait_2.png; sourceTree = SOURCE_ROOT; };
+		C7845C211C3A027900D5E55B /* publish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = publish.png; path = icons/publish.png; sourceTree = SOURCE_ROOT; };
+		C7845C251C3A02C200D5E55B /* JWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBaseViewController.h; sourceTree = "<group>"; };
+		C7845C261C3A02C200D5E55B /* JWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBaseViewController.m; sourceTree = "<group>"; };
+		C7845C351C3A4ACC00D5E55B /* JWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainViewController.h; sourceTree = "<group>"; };
+		C7845C361C3A4ACC00D5E55B /* JWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainViewController.m; sourceTree = "<group>"; };
+		C7F8044B1C44C24D0034D874 /* JWParkingInfoCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingInfoCustomCell.h; sourceTree = "<group>"; };
+		C7F8044C1C44C24D0034D874 /* JWParkingInfoCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingInfoCustomCell.m; sourceTree = "<group>"; };
+		C7F8044E1C44CAB10034D874 /* JWParkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingInfo.h; sourceTree = "<group>"; };
+		C7F8044F1C44CAB10034D874 /* JWParkingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingInfo.m; sourceTree = "<group>"; };
+		C7F804521C44DB960034D874 /* sdRefeshView_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sdRefeshView_arrow@2x.png"; path = "SDRefresh/sdRefeshView_arrow@2x.png"; sourceTree = SOURCE_ROOT; };
+		C7F804531C44DB960034D874 /* SDRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDRefresh.h; path = SDRefresh/SDRefresh.h; sourceTree = SOURCE_ROOT; };
+		C7F804541C44DB960034D874 /* SDRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDRefreshFooterView.h; path = SDRefresh/SDRefreshFooterView.h; sourceTree = SOURCE_ROOT; };
+		C7F804551C44DB960034D874 /* SDRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDRefreshFooterView.m; path = SDRefresh/SDRefreshFooterView.m; sourceTree = SOURCE_ROOT; };
+		C7F804561C44DB960034D874 /* SDRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDRefreshHeaderView.h; path = SDRefresh/SDRefreshHeaderView.h; sourceTree = SOURCE_ROOT; };
+		C7F804571C44DB960034D874 /* SDRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDRefreshHeaderView.m; path = SDRefresh/SDRefreshHeaderView.m; sourceTree = SOURCE_ROOT; };
+		C7F804581C44DB960034D874 /* SDRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDRefreshView.h; path = SDRefresh/SDRefreshView.h; sourceTree = SOURCE_ROOT; };
+		C7F804591C44DB960034D874 /* SDRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDRefreshView.m; path = SDRefresh/SDRefreshView.m; sourceTree = SOURCE_ROOT; };
+		C7F8045A1C44DB960034D874 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+SDExtension.h"; path = "SDRefresh/UIView+SDExtension.h"; sourceTree = SOURCE_ROOT; };
+		C7F8045B1C44DB960034D874 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDExtension.m"; path = "SDRefresh/UIView+SDExtension.m"; sourceTree = SOURCE_ROOT; };
+		C7F804621C44EBFC0034D874 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		C7F804631C44EBFC0034D874 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		C7F804651C45179E0034D874 /* JWParkingInfoListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingInfoListTableView.h; sourceTree = "<group>"; };
+		C7F804661C45179E0034D874 /* JWParkingInfoListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingInfoListTableView.m; sourceTree = "<group>"; };
+		C7FA06C91C4F25AF001D74B4 /* JWMyDemandListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMyDemandListViewController.h; sourceTree = "<group>"; };
+		C7FA06CA1C4F25AF001D74B4 /* JWMyDemandListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMyDemandListViewController.m; sourceTree = "<group>"; };
+		C7FA06CC1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMyDemandInfoDetailTableViewController.h; sourceTree = "<group>"; };
+		C7FA06CD1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMyDemandInfoDetailTableViewController.m; sourceTree = "<group>"; };
+		C7FA06CF1C4F7705001D74B4 /* JWMyAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMyAttentionViewController.h; sourceTree = "<group>"; };
+		C7FA06D01C4F7705001D74B4 /* JWMyAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMyAttentionViewController.m; sourceTree = "<group>"; };
+		C7FA06D21C4F91F2001D74B4 /* JWParkingOrDemandListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingOrDemandListViewController.h; sourceTree = "<group>"; };
+		C7FA06D31C4F91F2001D74B4 /* JWParkingOrDemandListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingOrDemandListViewController.m; sourceTree = "<group>"; };
+		C7FA06D51C4FB1BF001D74B4 /* JWMyCarportTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMyCarportTableViewController.h; sourceTree = "<group>"; };
+		C7FA06D61C4FB1BF001D74B4 /* JWMyCarportTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMyCarportTableViewController.m; sourceTree = "<group>"; };
+		C7FA93B71C4C7CCD00699B29 /* JWScrollImagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWScrollImagesView.h; sourceTree = "<group>"; };
+		C7FA93B81C4C7CCD00699B29 /* JWScrollImagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWScrollImagesView.m; sourceTree = "<group>"; };
+		C7FA93BB1C4CB3F300699B29 /* JWInputBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWInputBarView.h; sourceTree = "<group>"; };
+		C7FA93BC1C4CB3F300699B29 /* JWInputBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWInputBarView.m; sourceTree = "<group>"; };
+		C7FA93BE1C4E0D3600699B29 /* JWDemandInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDemandInfoViewController.h; sourceTree = "<group>"; };
+		C7FA93BF1C4E0D3600699B29 /* JWDemandInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDemandInfoViewController.m; sourceTree = "<group>"; };
+		C7FA93C21C4E1DBD00699B29 /* ico_make.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ico_make.png; path = JSDropDownMenu/ico_make.png; sourceTree = SOURCE_ROOT; };
+		C7FA93C31C4E1DBD00699B29 /* JSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSDropDownMenu.h; path = JSDropDownMenu/JSDropDownMenu.h; sourceTree = SOURCE_ROOT; };
+		C7FA93C41C4E1DBD00699B29 /* JSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSDropDownMenu.m; path = JSDropDownMenu/JSDropDownMenu.m; sourceTree = SOURCE_ROOT; };
+		C7FA93C71C4E2AFC00699B29 /* reply1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reply1.png; path = icons/reply1.png; sourceTree = SOURCE_ROOT; };
+		C7FA93C91C4E43A400699B29 /* JWSystemSetUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSystemSetUpViewController.h; sourceTree = "<group>"; };
+		C7FA93CA1C4E43A400699B29 /* JWSystemSetUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSystemSetUpViewController.m; sourceTree = "<group>"; };
+		C7FA93CF1C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMyCarportInfoTableViewController.h; sourceTree = "<group>"; };
+		C7FA93D01C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMyCarportInfoTableViewController.m; sourceTree = "<group>"; };
+		C7FAE9D11C1EE9B400E99804 /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
+		C7FAE9D21C1EE9B400E99804 /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
+		C7FAE9D41C1EF91900E99804 /* search_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search_pin.png; path = icons/search_pin.png; sourceTree = SOURCE_ROOT; };
+		C7FB3A931C43986A00B89A2C /* JWParkingLeaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingLeaseViewController.h; sourceTree = "<group>"; };
+		C7FB3A941C43986A00B89A2C /* JWParkingLeaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingLeaseViewController.m; sourceTree = "<group>"; };
+		C7FB3A961C43D71200B89A2C /* JWPublishDemandTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPublishDemandTableViewController.h; sourceTree = "<group>"; };
+		C7FB3A971C43D71200B89A2C /* JWPublishDemandTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPublishDemandTableViewController.m; sourceTree = "<group>"; };
+		C7FB533E1C3BDDA0000ECA28 /* JWPublishInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPublishInfoViewController.h; sourceTree = "<group>"; };
+		C7FB533F1C3BDDA0000ECA28 /* JWPublishInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPublishInfoViewController.m; sourceTree = "<group>"; };
+		C7FB534A1C3BE480000ECA28 /* JWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLoginViewController.h; sourceTree = "<group>"; };
+		C7FB534B1C3BE480000ECA28 /* JWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLoginViewController.m; sourceTree = "<group>"; };
+		C7FB534F1C3BF62E000ECA28 /* XMNAnimTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMNAnimTextFiled.h; path = textFieldEffect/XMNAnimTextFiled.h; sourceTree = "<group>"; };
+		C7FB53501C3BF62E000ECA28 /* XMNAnimTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMNAnimTextFiled.m; path = textFieldEffect/XMNAnimTextFiled.m; sourceTree = "<group>"; };
+		C7FC338B1C48E11F000233B6 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reply.png; path = icons/reply.png; sourceTree = SOURCE_ROOT; };
+		C7FCAE9A1C3F872E00B92AB2 /* location_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location_pressed.png; path = icons/location_pressed.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA0D1C3E004F00E964F5 /* demand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = demand.png; path = icons/demand.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA0E1C3E004F00E964F5 /* rightNavBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightNavBtn.png; path = icons/rightNavBtn.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA0F1C3E004F00E964F5 /* myFocus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myFocus.png; path = icons/myFocus.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA101C3E004F00E964F5 /* myNotice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myNotice.png; path = icons/myNotice.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA111C3E004F00E964F5 /* myOrder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myOrder.png; path = icons/myOrder.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA121C3E004F00E964F5 /* leftNavBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftNavBtn.png; path = icons/leftNavBtn.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA191C3E377A00E964F5 /* bg_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_img.png; path = icons/bg_img.png; sourceTree = SOURCE_ROOT; };
+		C7FCFA1B1C3E3F1100E964F5 /* user_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user_location.png; path = icons/user_location.png; sourceTree = SOURCE_ROOT; };
 		C7FD5D8D1C1A99D500F01E37 /* JWParkingLease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWParkingLease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FD5D911C1A99D500F01E37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7FD5D931C1A99D500F01E37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,16 +193,13 @@
 		C7FD5D9C1C1A99D500F01E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FD5D9F1C1A99D500F01E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7FD5DA11C1A99D500F01E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7FD5DAD1C1AA08600F01E37 /* JWLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWLeftViewController.h; sourceTree = "<group>"; };
-		C7FD5DAE1C1AA08600F01E37 /* JWLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWLeftViewController.m; sourceTree = "<group>"; };
-		C7FD5DB11C1AAC2A00F01E37 /* get.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = get.png; path = icons/get.png; sourceTree = SOURCE_ROOT; };
-		C7FD5DB21C1AAC2A00F01E37 /* lease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lease.png; path = icons/lease.png; sourceTree = SOURCE_ROOT; };
 		C7FD5DB31C1AAC2A00F01E37 /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = portrait.png; path = icons/portrait.png; sourceTree = SOURCE_ROOT; };
 		C7FD5DB41C1AAC2A00F01E37 /* setUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setUp.png; path = icons/setUp.png; sourceTree = SOURCE_ROOT; };
-		C7FD5DBA1C1AAEF400F01E37 /* JWCenterGetParkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCenterGetParkingViewController.h; sourceTree = "<group>"; };
-		C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCenterGetParkingViewController.m; sourceTree = "<group>"; };
-		C7FD5DBF1C1AB01A00F01E37 /* JWCenterLeaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCenterLeaseViewController.h; sourceTree = "<group>"; };
-		C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCenterLeaseViewController.m; sourceTree = "<group>"; };
+		C7FF05E01C462F8D003C2E34 /* JWParkingInfoFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWParkingInfoFrame.h; sourceTree = "<group>"; };
+		C7FF05E11C462F8D003C2E34 /* JWParkingInfoFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWParkingInfoFrame.m; sourceTree = "<group>"; };
+		C7FFB68B1C2017E2003F0E3B /* MyInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoTableViewController.h; sourceTree = "<group>"; };
+		C7FFB68C1C2017E2003F0E3B /* MyInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoTableViewController.m; sourceTree = "<group>"; };
+		C7FFB6911C2032FE003F0E3B /* my_profile_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = my_profile_bg.png; path = icons/my_profile_bg.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +231,149 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C701B4411C47C67C00747F68 /* CustomCommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				C701B4421C47C6EA00747F68 /* JWCommentInfo.h */,
+				C701B4431C47C6EA00747F68 /* JWCommentInfo.m */,
+				C701B4451C47CF5500747F68 /* JWCommentInfoFrame.h */,
+				C701B4461C47CF5500747F68 /* JWCommentInfoFrame.m */,
+				C701B4481C47D92800747F68 /* JWCommentCustomCell.h */,
+				C701B4491C47D92800747F68 /* JWCommentCustomCell.m */,
+			);
+			name = CustomCommentCell;
+			sourceTree = "<group>";
+		};
+		C7845C281C3A3CC100D5E55B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB53461C3BE29B000ECA28 /* textFieldEffect */,
+				C7845C251C3A02C200D5E55B /* JWBaseViewController.h */,
+				C7845C261C3A02C200D5E55B /* JWBaseViewController.m */,
+				C7845C351C3A4ACC00D5E55B /* JWMainViewController.h */,
+				C7845C361C3A4ACC00D5E55B /* JWMainViewController.m */,
+				C70BFDBB1C3A923400B9F665 /* LeftViewController.h */,
+				C70BFDBC1C3A923400B9F665 /* LeftViewController.m */,
+				C708D9F81C2251A900CEA6FC /* JWChoseVillageViewController.h */,
+				C708D9F91C2251A900CEA6FC /* JWChoseVillageViewController.m */,
+				C7FB533E1C3BDDA0000ECA28 /* JWPublishInfoViewController.h */,
+				C7FB533F1C3BDDA0000ECA28 /* JWPublishInfoViewController.m */,
+				C7FB534A1C3BE480000ECA28 /* JWLoginViewController.h */,
+				C7FB534B1C3BE480000ECA28 /* JWLoginViewController.m */,
+				C705E43C1C3CDB7B0030027E /* JWGetRandomViewController.h */,
+				C705E43D1C3CDB7B0030027E /* JWGetRandomViewController.m */,
+				C705E43F1C3CF2170030027E /* JWRegisterTableViewController.h */,
+				C705E4401C3CF2170030027E /* JWRegisterTableViewController.m */,
+				C705E4421C3D31CD0030027E /* JWResetPasswdTableViewController.h */,
+				C705E4431C3D31CD0030027E /* JWResetPasswdTableViewController.m */,
+				C7FB3A931C43986A00B89A2C /* JWParkingLeaseViewController.h */,
+				C7FB3A941C43986A00B89A2C /* JWParkingLeaseViewController.m */,
+				C7FB3A961C43D71200B89A2C /* JWPublishDemandTableViewController.h */,
+				C7FB3A971C43D71200B89A2C /* JWPublishDemandTableViewController.m */,
+				C7F804651C45179E0034D874 /* JWParkingInfoListTableView.h */,
+				C7F804661C45179E0034D874 /* JWParkingInfoListTableView.m */,
+				C701B43C1C477D4100747F68 /* JWParkingDetailInfoViewController.h */,
+				C701B43D1C477D4100747F68 /* JWParkingDetailInfoViewController.m */,
+				C7FA93BE1C4E0D3600699B29 /* JWDemandInfoViewController.h */,
+				C7FA93BF1C4E0D3600699B29 /* JWDemandInfoViewController.m */,
+				C7FA93C91C4E43A400699B29 /* JWSystemSetUpViewController.h */,
+				C7FA93CA1C4E43A400699B29 /* JWSystemSetUpViewController.m */,
+				C7FA93CF1C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.h */,
+				C7FA93D01C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.m */,
+				C7FA06C91C4F25AF001D74B4 /* JWMyDemandListViewController.h */,
+				C7FA06CA1C4F25AF001D74B4 /* JWMyDemandListViewController.m */,
+				C7FA06CC1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.h */,
+				C7FA06CD1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.m */,
+				C7FA06CF1C4F7705001D74B4 /* JWMyAttentionViewController.h */,
+				C7FA06D01C4F7705001D74B4 /* JWMyAttentionViewController.m */,
+				C7FA06D21C4F91F2001D74B4 /* JWParkingOrDemandListViewController.h */,
+				C7FA06D31C4F91F2001D74B4 /* JWParkingOrDemandListViewController.m */,
+				C7FA06D51C4FB1BF001D74B4 /* JWMyCarportTableViewController.h */,
+				C7FA06D61C4FB1BF001D74B4 /* JWMyCarportTableViewController.m */,
+				C7567F121C50A78A00CD0323 /* JWCommentViewController.h */,
+				C7567F131C50A78A00CD0323 /* JWCommentViewController.m */,
+				C7567F151C50C13700CD0323 /* JWMyInfoTableViewController.h */,
+				C7567F161C50C13700CD0323 /* JWMyInfoTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C7F8044A1C44C1E10034D874 /* CustomParkingInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7F8044B1C44C24D0034D874 /* JWParkingInfoCustomCell.h */,
+				C7F8044C1C44C24D0034D874 /* JWParkingInfoCustomCell.m */,
+				C7F8044E1C44CAB10034D874 /* JWParkingInfo.h */,
+				C7F8044F1C44CAB10034D874 /* JWParkingInfo.m */,
+				C7FF05E01C462F8D003C2E34 /* JWParkingInfoFrame.h */,
+				C7FF05E11C462F8D003C2E34 /* JWParkingInfoFrame.m */,
+			);
+			name = CustomParkingInfoCell;
+			sourceTree = "<group>";
+		};
+		C7F804511C44DB750034D874 /* SDRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C7F804521C44DB960034D874 /* sdRefeshView_arrow@2x.png */,
+				C7F804531C44DB960034D874 /* SDRefresh.h */,
+				C7F804541C44DB960034D874 /* SDRefreshFooterView.h */,
+				C7F804551C44DB960034D874 /* SDRefreshFooterView.m */,
+				C7F804561C44DB960034D874 /* SDRefreshHeaderView.h */,
+				C7F804571C44DB960034D874 /* SDRefreshHeaderView.m */,
+				C7F804581C44DB960034D874 /* SDRefreshView.h */,
+				C7F804591C44DB960034D874 /* SDRefreshView.m */,
+				C7F8045A1C44DB960034D874 /* UIView+SDExtension.h */,
+				C7F8045B1C44DB960034D874 /* UIView+SDExtension.m */,
+			);
+			name = SDRefresh;
+			sourceTree = "<group>";
+		};
+		C7F804611C44EB710034D874 /* 自定义按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				C7F804621C44EBFC0034D874 /* CustomButton.h */,
+				C7F804631C44EBFC0034D874 /* CustomButton.m */,
+			);
+			name = "自定义按钮";
+			sourceTree = "<group>";
+		};
+		C7FA93B61C4C7C6C00699B29 /* scrollImages */ = {
+			isa = PBXGroup;
+			children = (
+				C7FA93B71C4C7CCD00699B29 /* JWScrollImagesView.h */,
+				C7FA93B81C4C7CCD00699B29 /* JWScrollImagesView.m */,
+			);
+			name = scrollImages;
+			sourceTree = "<group>";
+		};
+		C7FA93BA1C4CB0F600699B29 /* CustomInputBar */ = {
+			isa = PBXGroup;
+			children = (
+				C7FA93BB1C4CB3F300699B29 /* JWInputBarView.h */,
+				C7FA93BC1C4CB3F300699B29 /* JWInputBarView.m */,
+			);
+			name = CustomInputBar;
+			sourceTree = "<group>";
+		};
+		C7FA93C11C4E1D9800699B29 /* JSDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C7FA93C21C4E1DBD00699B29 /* ico_make.png */,
+				C7FA93C31C4E1DBD00699B29 /* JSDropDownMenu.h */,
+				C7FA93C41C4E1DBD00699B29 /* JSDropDownMenu.m */,
+			);
+			name = JSDropDownMenu;
+			sourceTree = "<group>";
+		};
+		C7FB53461C3BE29B000ECA28 /* textFieldEffect */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB534F1C3BF62E000ECA28 /* XMNAnimTextFiled.h */,
+				C7FB53501C3BF62E000ECA28 /* XMNAnimTextFiled.m */,
+			);
+			name = textFieldEffect;
+			sourceTree = "<group>";
+		};
 		C7FD5D841C1A99D500F01E37 = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +402,6 @@
 				C7FD5D9E1C1A99D500F01E37 /* LaunchScreen.storyboard */,
 				C7FD5DA11C1A99D500F01E37 /* Info.plist */,
 				C7FD5D901C1A99D500F01E37 /* Supporting Files */,
-				C7FD5DAD1C1AA08600F01E37 /* JWLeftViewController.h */,
-				C7FD5DAE1C1AA08600F01E37 /* JWLeftViewController.m */,
 			);
 			path = JWParkingLease;
 			sourceTree = "<group>";
@@ -123,6 +409,14 @@
 		C7FD5D901C1A99D500F01E37 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C7FA93C11C4E1D9800699B29 /* JSDropDownMenu */,
+				C7FA93BA1C4CB0F600699B29 /* CustomInputBar */,
+				C7FA93B61C4C7C6C00699B29 /* scrollImages */,
+				C701B4411C47C67C00747F68 /* CustomCommentCell */,
+				C7F804611C44EB710034D874 /* 自定义按钮 */,
+				C7F804511C44DB750034D874 /* SDRefresh */,
+				C7F8044A1C44C1E10034D874 /* CustomParkingInfoCell */,
+				C7845C281C3A3CC100D5E55B /* ViewControllers */,
 				C7FD5DB91C1AAE8F00F01E37 /* centreViewController */,
 				C7FD5DB01C1AAB2B00F01E37 /* icons */,
 				C7FD5D911C1A99D500F01E37 /* main.m */,
@@ -134,9 +428,25 @@
 		C7FD5DB01C1AAB2B00F01E37 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				C700852F1C1BEFDA002CF9C2 /* open.png */,
-				C7FD5DB11C1AAC2A00F01E37 /* get.png */,
-				C7FD5DB21C1AAC2A00F01E37 /* lease.png */,
+				C7FA93C71C4E2AFC00699B29 /* reply1.png */,
+				C7FC338B1C48E11F000233B6 /* reply.png */,
+				C7FCAE9A1C3F872E00B92AB2 /* location_pressed.png */,
+				C7FCFA1B1C3E3F1100E964F5 /* user_location.png */,
+				C7FCFA191C3E377A00E964F5 /* bg_img.png */,
+				C7FCFA0D1C3E004F00E964F5 /* demand.png */,
+				C7FCFA0E1C3E004F00E964F5 /* rightNavBtn.png */,
+				C7FCFA0F1C3E004F00E964F5 /* myFocus.png */,
+				C7FCFA101C3E004F00E964F5 /* myNotice.png */,
+				C7FCFA111C3E004F00E964F5 /* myOrder.png */,
+				C7FCFA121C3E004F00E964F5 /* leftNavBtn.png */,
+				C705E4361C3C9E960030027E /* invisible_icon@2x.png */,
+				C705E4371C3C9E960030027E /* login_pwd.png */,
+				C705E4381C3C9E960030027E /* login_user.png */,
+				C7845C1F1C3A027900D5E55B /* change.png */,
+				C7845C201C3A027900D5E55B /* portrait_2.png */,
+				C7845C211C3A027900D5E55B /* publish.png */,
+				C7FFB6911C2032FE003F0E3B /* my_profile_bg.png */,
+				C7FAE9D41C1EF91900E99804 /* search_pin.png */,
 				C7FD5DB31C1AAC2A00F01E37 /* portrait.png */,
 				C7FD5DB41C1AAC2A00F01E37 /* setUp.png */,
 			);
@@ -146,14 +456,12 @@
 		C7FD5DB91C1AAE8F00F01E37 /* centreViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C7FD5DBA1C1AAEF400F01E37 /* JWCenterGetParkingViewController.h */,
-				C7FD5DBB1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m */,
-				C7FD5DBF1C1AB01A00F01E37 /* JWCenterLeaseViewController.h */,
-				C7FD5DC01C1AB01A00F01E37 /* JWCenterLeaseViewController.m */,
-				C70085321C1BFD90002CF9C2 /* JWSearchResultViewController.h */,
-				C70085331C1BFD90002CF9C2 /* JWSearchResultViewController.m */,
-				C70085371C1C2883002CF9C2 /* JWChoseCityViewController.h */,
-				C70085381C1C2883002CF9C2 /* JWChoseCityViewController.m */,
+				C7FAE9D11C1EE9B400E99804 /* ClusterAnnotationView.h */,
+				C7FAE9D21C1EE9B400E99804 /* ClusterAnnotationView.m */,
+				C7FFB68B1C2017E2003F0E3B /* MyInfoTableViewController.h */,
+				C7FFB68C1C2017E2003F0E3B /* MyInfoTableViewController.m */,
+				C708D9FB1C2291A800CEA6FC /* choseTimeViewController.h */,
+				C708D9FC1C2291A800CEA6FC /* choseTimeViewController.m */,
 			);
 			name = centreViewController;
 			sourceTree = "<group>";
@@ -170,6 +478,7 @@
 				C7FD5D8A1C1A99D500F01E37 /* Frameworks */,
 				C7FD5D8B1C1A99D500F01E37 /* Resources */,
 				228B7494E20F3F15F748FF21 /* Copy Pods Resources */,
+				D6CE685C3F7CD5879F59BC42 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,14 +526,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F8045C1C44DB960034D874 /* sdRefeshView_arrow@2x.png in Resources */,
 				C7FD5DB71C1AAC2A00F01E37 /* portrait.png in Resources */,
-				C7FD5DB61C1AAC2A00F01E37 /* lease.png in Resources */,
+				C7FCFA1C1C3E3F1100E964F5 /* user_location.png in Resources */,
+				C705E43A1C3C9E960030027E /* login_pwd.png in Resources */,
+				C7FCFA1A1C3E377A00E964F5 /* bg_img.png in Resources */,
+				C705E43B1C3C9E960030027E /* login_user.png in Resources */,
+				C7FCAE9B1C3F872E00B92AB2 /* location_pressed.png in Resources */,
+				C7FCFA161C3E004F00E964F5 /* myNotice.png in Resources */,
+				C7845C231C3A027900D5E55B /* portrait_2.png in Resources */,
+				C7FCFA181C3E004F00E964F5 /* leftNavBtn.png in Resources */,
+				C7FCFA131C3E004F00E964F5 /* demand.png in Resources */,
+				C7FCFA171C3E004F00E964F5 /* myOrder.png in Resources */,
+				C7FFB6921C2032FE003F0E3B /* my_profile_bg.png in Resources */,
+				C7FCFA151C3E004F00E964F5 /* myFocus.png in Resources */,
+				C7845C241C3A027900D5E55B /* publish.png in Resources */,
 				C7FD5DA01C1A99D500F01E37 /* LaunchScreen.storyboard in Resources */,
+				C7FA93C81C4E2AFC00699B29 /* reply1.png in Resources */,
+				C7FC338C1C48E11F000233B6 /* reply.png in Resources */,
 				C7FD5DB81C1AAC2A00F01E37 /* setUp.png in Resources */,
 				C7FD5D9D1C1A99D500F01E37 /* Assets.xcassets in Resources */,
-				C70085301C1BEFDA002CF9C2 /* open.png in Resources */,
-				C7FD5DB51C1AAC2A00F01E37 /* get.png in Resources */,
+				C7845C221C3A027900D5E55B /* change.png in Resources */,
+				C7FAE9D51C1EF91900E99804 /* search_pin.png in Resources */,
+				C7FCFA141C3E004F00E964F5 /* rightNavBtn.png in Resources */,
 				C7FD5D9B1C1A99D500F01E37 /* Main.storyboard in Resources */,
+				C7FA93C51C4E1DBD00699B29 /* ico_make.png in Resources */,
+				C705E4391C3C9E960030027E /* invisible_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +588,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		D6CE685C3F7CD5879F59BC42 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,13 +610,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C70085341C1BFD90002CF9C2 /* JWSearchResultViewController.m in Sources */,
+				C7F804641C44EBFC0034D874 /* CustomButton.m in Sources */,
+				C7FB53511C3BF62E000ECA28 /* XMNAnimTextFiled.m in Sources */,
 				C7FD5D951C1A99D500F01E37 /* AppDelegate.m in Sources */,
+				C701B4471C47CF5500747F68 /* JWCommentInfoFrame.m in Sources */,
+				C7567F171C50C13700CD0323 /* JWMyInfoTableViewController.m in Sources */,
+				C7845C271C3A02C200D5E55B /* JWBaseViewController.m in Sources */,
+				C7FAE9D31C1EE9B400E99804 /* ClusterAnnotationView.m in Sources */,
+				C7F8045D1C44DB960034D874 /* SDRefreshFooterView.m in Sources */,
+				C7FA06D71C4FB1BF001D74B4 /* JWMyCarportTableViewController.m in Sources */,
+				C7FA93B91C4C7CCD00699B29 /* JWScrollImagesView.m in Sources */,
+				C7FB3A981C43D71200B89A2C /* JWPublishDemandTableViewController.m in Sources */,
+				C708D9FD1C2291A800CEA6FC /* choseTimeViewController.m in Sources */,
+				C705E4411C3CF2170030027E /* JWRegisterTableViewController.m in Sources */,
+				C70BFDBD1C3A923400B9F665 /* LeftViewController.m in Sources */,
+				C7FA93C61C4E1DBD00699B29 /* JSDropDownMenu.m in Sources */,
+				C7FA93BD1C4CB3F300699B29 /* JWInputBarView.m in Sources */,
+				C7FA06CE1C4F68BC001D74B4 /* JWMyDemandInfoDetailTableViewController.m in Sources */,
+				C7FA06CB1C4F25AF001D74B4 /* JWMyDemandListViewController.m in Sources */,
+				C7F8044D1C44C24D0034D874 /* JWParkingInfoCustomCell.m in Sources */,
+				C701B43F1C477D4100747F68 /* JWParkingDetailInfoViewController.m in Sources */,
+				C7FF05E21C462F8D003C2E34 /* JWParkingInfoFrame.m in Sources */,
 				C7FD5D921C1A99D500F01E37 /* main.m in Sources */,
-				C7FD5DBC1C1AAEF400F01E37 /* JWCenterGetParkingViewController.m in Sources */,
-				C7FD5DC11C1AB01A00F01E37 /* JWCenterLeaseViewController.m in Sources */,
-				C70085391C1C2883002CF9C2 /* JWChoseCityViewController.m in Sources */,
-				C7FD5DAF1C1AA08600F01E37 /* JWLeftViewController.m in Sources */,
+				C701B44A1C47D92800747F68 /* JWCommentCustomCell.m in Sources */,
+				C7FA93C01C4E0D3600699B29 /* JWDemandInfoViewController.m in Sources */,
+				C7567F141C50A78A00CD0323 /* JWCommentViewController.m in Sources */,
+				C705E43E1C3CDB7B0030027E /* JWGetRandomViewController.m in Sources */,
+				C7FB3A951C43986A00B89A2C /* JWParkingLeaseViewController.m in Sources */,
+				C7F804671C45179E0034D874 /* JWParkingInfoListTableView.m in Sources */,
+				C7FB534D1C3BE480000ECA28 /* JWLoginViewController.m in Sources */,
+				C7FA06D41C4F91F2001D74B4 /* JWParkingOrDemandListViewController.m in Sources */,
+				C708D9FA1C2251A900CEA6FC /* JWChoseVillageViewController.m in Sources */,
+				C7F8045F1C44DB960034D874 /* SDRefreshView.m in Sources */,
+				C7F804601C44DB960034D874 /* UIView+SDExtension.m in Sources */,
+				C7F8045E1C44DB960034D874 /* SDRefreshHeaderView.m in Sources */,
+				C701B4441C47C6EA00747F68 /* JWCommentInfo.m in Sources */,
+				C7FA06D11C4F7705001D74B4 /* JWMyAttentionViewController.m in Sources */,
+				C7FA93D11C4E6A8C00699B29 /* JWMyCarportInfoTableViewController.m in Sources */,
+				C7845C371C3A4ACC00D5E55B /* JWMainViewController.m in Sources */,
+				C7FB53401C3BDDA0000ECA28 /* JWPublishInfoViewController.m in Sources */,
+				C7FA93CB1C4E43A400699B29 /* JWSystemSetUpViewController.m in Sources */,
+				C7F804501C44CAB10034D874 /* JWParkingInfo.m in Sources */,
+				C7FFB68D1C2017E2003F0E3B /* MyInfoTableViewController.m in Sources */,
+				C705E4441C3D31CD0030027E /* JWResetPasswdTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,7 @@
 
 @interface JWDemandInfoViewController : UIViewController
 
+//定义一个字典，用于接受上一界面传递的值
+@property(nonatomic,strong) NSDictionary * getDic;
+
 @end

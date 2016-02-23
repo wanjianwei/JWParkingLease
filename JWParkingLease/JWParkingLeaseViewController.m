@@ -9,7 +9,7 @@
 #import "JWParkingLeaseViewController.h"
 #import "JWChoseVillageViewController.h"
 #import "choseTimeViewController.h"
-@interface JWParkingLeaseViewController ()<UITextFieldDelegate,getParkingAddressDelegate>{
+@interface JWParkingLeaseViewController ()<UITextFieldDelegate,getParkingAddressDelegate,UITextViewDelegate>{
    
     //价格输入框
     UITextField * price;
@@ -17,21 +17,18 @@
     //下一步按钮
     UIButton * btn;
     
-    
-    //定义一个日期选择器
-    UIDatePicker * datePickerView;
-    
+    //额外说明输入框
+    UITextView * illustrationView;
     /**
      定义一个标志，来表示车位租让类型,其中“0”表示出租，“1”表示出售，“2”表示共享
      */
     int leaseType;
-    
-    
-    
 }
 
 //定义一个字典类型数据，用于存储表单信息
 @property(nonatomic,strong)NSMutableDictionary * parkingInfo;
+//定义一个日期选择器背景view
+@property(nonatomic,strong)UIView * bgView;
 
 @end
 
@@ -42,10 +39,7 @@
     
     //初始化
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
-    
-    //构造日期选择器
-    [self makeDatePickerView];
-
+   
     leaseType = 0;
     
     self.parkingInfo = [NSMutableDictionary dictionaryWithDictionary:@{@"leaseType":@"出租",@"detailAddress":@"请先获取街区/商场名称",@"address":@"",@"carportType":@"地上车位",@"carportPrice":@"",@"leaseBeginTime":@"",@"leaseEndTime":@""}];
@@ -57,26 +51,13 @@
 }
 
 
-//构造日期选择器
--(void)makeDatePickerView{
-    
-    UIView * bgView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 230)];
-    [self.view addSubview:bgView];
-    
-    datePickerView = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, 216)];
-    datePickerView.datePickerMode = UIDatePickerModeDate;
-    datePickerView.maximumDate = [NSDate dateWithTimeIntervalSinceNow:946080000];
-    datePickerView.minimumDate = [NSDate date];
-    //添加事件响应
-    [datePickerView addTarget:self action:@selector(chooseDate:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:datePickerView];
-}
-
-
 //提交出租申请
 -(void)handRequest:(id)sender{
    //先判断信息是否填写完整
     if ([self shouldGotoNextPage:_parkingInfo]) {
+        
+        //发布成功后弹出提示，判断是否跳转到图片上传界面
+        
         choseTimeViewController * choseView = [[choseTimeViewController alloc] init];
         choseView.parkingInfo = _parkingInfo;
         [self.navigationController pushViewController:choseView animated:YES];
@@ -91,30 +72,9 @@
 }
 
 
-//选择时间
--(void)chooseDate:(id)sender{
-    
-}
-
-
-
 //定义一个方法，用于检查_parkingInfo是否有空值
 -(BOOL)shouldGotoNextPage:(NSMutableDictionary*)dic{
-    /*
-    __block BOOL flag = YES;
-    while (flag) {
-        [dic enumerateKeysAndObjectsUsingBlock:^(NSString * key, NSString * obj, BOOL * _Nonnull stop) {
-            if ([obj isEqualToString:@""]) {
-                flag = NO;
-                * stop = YES;
-            }
-            
-        }];
-        break;
-    }
-    return flag;
-    */
-    
+   
     if (leaseType == 1) {
         if ([[_parkingInfo objectForKey:@"address"] isEqualToString:@""] || [[_parkingInfo objectForKey:@"carportPrice"] isEqualToString:@""]) {
             return NO;
@@ -133,7 +93,7 @@
 
 #pragma UITableViewDelegate/dataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 5;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -147,6 +107,8 @@
         }else {
             return 4;
         }
+    }else if(section == 3){
+        return 1;
     }else{
         return 1;
     }
@@ -186,11 +148,11 @@
         case 2:{
            
             if (indexPath.row == 0) {
-                cell.textLabel.text = @"类型";
+                cell.textLabel.text = @"车位类型";
                 cell.detailTextLabel.text = [_parkingInfo objectForKey:@"carportType"];
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             }else if(indexPath.row == 1){
-                cell.textLabel.text = @"租价";
+                cell.textLabel.text = @"车位租价";
                 if (![cell.contentView.subviews containsObject:price]) {
                     [price removeFromSuperview];
                     price = [[UITextField alloc] initWithFrame:CGRectMake(80, 0, [UIScreen mainScreen].bounds.size.width-96, 44)];
@@ -203,7 +165,7 @@
                     price.delegate = self;
                     price.textAlignment = NSTextAlignmentRight;
                     price.returnKeyType = UIReturnKeyDone;
-                        
+                    price.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
                     [cell.contentView addSubview:price];
                 }
                 price.text = [_parkingInfo objectForKey:@"carportPrice"];
@@ -221,10 +183,24 @@
         }
         
         case 3:{
+            if (![cell.contentView.subviews containsObject:illustrationView]) {
+                illustrationView = [[UITextView alloc] initWithFrame:CGRectMake(16, 0, [UIScreen mainScreen].bounds.size.width-32, 90)];
+                illustrationView.delegate = self;
+                illustrationView.textAlignment = NSTextAlignmentLeft;
+                illustrationView.font = [UIFont boldSystemFontOfSize:16];
+                illustrationView.returnKeyType = UIReturnKeyDone;
+                illustrationView.textColor = [UIColor grayColor];
+                [cell.contentView addSubview:illustrationView];
+            }
+            illustrationView.text = [_parkingInfo objectForKey:@"illustration"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            break;
+        }
+        case 4:{
             if (![cell.contentView.subviews containsObject:btn]) {
                 btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 44)];
                 btn.backgroundColor = [UIColor redColor];
-                [btn setTitle:@"下一步" forState:UIControlStateNormal];
+                [btn setTitle:@"提交" forState:UIControlStateNormal];
                 [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 [btn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
                 [cell.contentView addSubview:btn];
@@ -234,6 +210,7 @@
             }
             break;
         }
+
         default:
             break;
     }
@@ -241,13 +218,25 @@
     return cell;
 }
 
+//行高
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 3) {
+        return 90;
+    }else{
+        return 44;
+    }
+}
+
+
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if (section == 0) {
-        return @"请选择租让类型";
+        return @"*请选择租让类型";
     }else if (section == 1){
-        return @"车位地址信息";
+        return @"*请填写车位地址信息";
     }else if (section == 2){
-        return @"车位租让信息";
+        return @"*请填写车位租让信息";
+    }else if (section == 3){
+        return @"附加说明(输入您想补充的)";
     }else{
         return nil;
     }
@@ -294,7 +283,11 @@
             [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
         }];
         
-        UIAlertAction * action4 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction * action4 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            //更新row
+            [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+            
+        }];
         
         [alertSheet addAction:action1];
         [alertSheet addAction:action2];
@@ -325,19 +318,69 @@
                 [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:2]] withRowAnimation:UITableViewRowAnimationFade];
             }];
             
-            UIAlertAction * action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction * action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:2]] withRowAnimation:UITableViewRowAnimationFade];
+            }];
             
             [alertSheet addAction:action1];
             [alertSheet addAction:action2];
             [alertSheet addAction:action3];
             [self presentViewController:alertSheet animated:YES completion:nil];
         }else if (indexPath.row == 2){
-            DLog(@"23");
+            //弹出actionController——时间选择器
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n" message:@"请选择车位租让的起始时间" preferredStyle:UIAlertControllerStyleActionSheet];
+            //日期选择器
+            UIDatePicker * datePicker = [[UIDatePicker alloc] init];
+            datePicker.datePickerMode = UIDatePickerModeDate;
+            datePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow:946080000];
+            datePicker.minimumDate = [NSDate date];
+            [alert.view addSubview:datePicker];
+            datePicker.center = CGPointMake(alert.view.bounds.size.width/2, 100);
+           
             
-            
-            
+            UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                 //更新
+                NSDate * selectDate = [datePicker date];
+                //日期格式转换
+                NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
+                [_parkingInfo setObject:[dateFormatter stringFromDate:selectDate] forKey:@"leaseBeginTime"];
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:2 inSection:2]] withRowAnimation:UITableViewRowAnimationFade];
+
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:2 inSection:2]] withRowAnimation:UITableViewRowAnimationFade];
+            }];
+            [alert addAction:cancel];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
         }else if (indexPath.row == 3){
-            DLog(@"233");
+            //弹出actionController——时间选择器
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"\n\n\n\n\n\n\n\n\n" message:@"请选择车位租让的截止时间" preferredStyle:UIAlertControllerStyleActionSheet];
+            //日期选择器
+            UIDatePicker * datePicker = [[UIDatePicker alloc] init];
+            datePicker.datePickerMode = UIDatePickerModeDate;
+            datePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow:946080000];
+            datePicker.minimumDate = [NSDate date];
+            [alert.view addSubview:datePicker];
+            datePicker.center = CGPointMake(alert.view.bounds.size.width/2, 100);
+            
+            UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                //更新
+                NSDate * selectDate = [datePicker date];
+                //日期格式转换
+                NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
+                [_parkingInfo setObject:[dateFormatter stringFromDate:selectDate] forKey:@"leaseEndTime"];
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:3 inSection:2]] withRowAnimation:UITableViewRowAnimationFade];
+                
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:3 inSection:2]] withRowAnimation:UITableViewRowAnimationFade];
+            }];
+            [alert addAction:action];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
         }
         
     }
@@ -368,10 +411,27 @@
 
 #pragma getParkingAddressDelegate
 -(void)getCarportAddress:(NSDictionary *)addressdic{
-    //设置值并更新表视图
+    //设置值（包括经纬度）并更新表视图
     [_parkingInfo setObject:[addressdic objectForKey:@"detailAddress"] forKey:@"detailAddress"];
     [_parkingInfo setObject:[addressdic objectForKey:@"address"] forKey:@"address"];
+    [_parkingInfo setObject:[addressdic objectForKey:@"latitude"] forKey:@"latitude"];
+    [_parkingInfo setObject:[addressdic objectForKey:@"longitude"] forKey:@"longitude"];
+    //更新表示图
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation: UITableViewRowAnimationFade];
 }
+
+#pragma UITtextViewDelegate
+
+//关闭键盘
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
+
 
 @end
